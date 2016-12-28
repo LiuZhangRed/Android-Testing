@@ -1,15 +1,18 @@
 package com.example.jerry.testing.activity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.jerry.testing.R;
 
 public class MainActivity extends BaseActivity {
     private long clickTime = 0; //记录第一次点击的时间
+    private ImageView Iv_more;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,14 @@ public class MainActivity extends BaseActivity {
             view_title.setVisibility(View.VISIBLE);
             //  getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); （导航栏）
         }
+        Iv_more=(ImageView)findViewById(R.id.Iv_more);
+        Iv_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,MoreActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
