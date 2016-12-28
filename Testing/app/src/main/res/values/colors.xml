@@ -1,6 +1,293 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="stranslucent_background">#80000000</color>
+    <!-- 头部颜色 -->
+    <color name="title_clor">#46466d</color>
+    <!-- 按钮颜色 -->
+    <color name="button_clor">#46466d</color>
+    <!-- 公共颜色开始 -->
+    <!-- 图表颜色 -->
+    <color name="tb_munion_item_force">#e3e3e3</color>
+    <color name="bg_red">#ff3b51</color>
+    <color name="graph_yellow">#ffc000</color>
+    <color name="graph_green">#91cf00</color>
+    <color name="graph_blue">#688fdf</color>
+    <!-- 文字颜色 -->
+    <color name="title_text_black">#1f1f1f</color>
+    <color name="nav_btn_black">#686868</color>
+    <color name="nav_btn_selected_black">#1f1f1f</color>
+    <color name="list_text_black">#1f1f1f</color>
+    <color name="list_text_gray">#686868</color>
+    <color name="list_text_gray_new">#8f8f8f</color>
+    <color name="list_text_blue">#688fdf</color>
+    <!-- edittext的提示颜色 -->
+    <color name="text_gray_unedit">#b0b0b0</color>
+    <!-- textview阅读时不可点击的灰色 -->
+    <color name="text_gray_unclick">#b5b5b5</color>
+    <!-- 工具栏分割线颜色 -->
+    <color name="toolbar_separator">#a0a0a0</color>
+    <!-- 背景颜色 -->
+    <color name="lite_blue">#ff359ff2</color>
+    <color name="window_background">#00000000</color>
+    <color name="black_de">#DE000000</color>
+    <color name="card_background">#ffffff</color>
+    <color name="card_shadow">#10000000</color>
+    <color name="index_bkgrd">#fbfbfb</color>
+    <color name="common_back">#f0f0f0</color>
+    <color name="nav_bkgrd">#ffffff</color>
+    <color name="bg_toolbar">#f5f5f5</color>
+    <color name="bg_blue">#688fdf</color>
+    <!-- 列表颜色 -->
+    <color name="list_item_selected_bkgrd">#f0f0f0</color>
+    <color name="list_separator">#dfdfdf</color>
+    <color name="list_border">#d0d0d0</color>
+    <color name="history_list_item_bkgrd">#f8f8f8</color>
+    <!-- btn背景颜色 -->
+    <color name="btn_bkgrd_blue">#65a5ff</color>
+    <color name="btn_bkgrd_blue_selected">#3f8fe1</color>
+    <color name="btn_bkgrd_red">#ff5001</color>
+    <color name="btn_bkgrd_red_selected">#df3f00</color>
+    <!-- 公共颜色结束 -->
+    <color name="button_red_nor">#ff5001</color>
+    <color name="button_red_press">#df3f00</color>
+    <!--首页字体-->
+    <color name="home_font">#666666</color>
+    <color name="white">#ffffff</color>
+    <!-- 白色 -->
+    <color name="black">#202020</color>
+    <!-- 黑色 -->
+    <color name="blue">#00acee</color>
+    <!-- 蓝色 -->
+    <color name="darkgray">#777777</color>
+    <!-- 暗灰色 -->
+    <color name="clicgreen">#04BFBF</color>
+    <color name="darkcyan">#006699</color>
+    <!-- 暗青色 -->
+    <color name="lightcyan">#0099cc</color>
+    <!-- 浅青色 -->
+    <color name="darkblue">#003366</color>
+    <!-- 深蓝色 -->
+    <color name="lightblue">#99ccff</color>
+    <!-- 浅蓝色 -->
+    <color name="lightbrown">#ffcc99</color>
+    <!-- 浅棕色 -->
+    <color name="darkbrown">#cc9966</color>
+    <!-- 深棕色 -->
+    <color name="magenta">#cc3399</color>
+    <!-- 洋红色 -->
+    <color name="lightgray">#D3D3D3</color>
+    <!-- 浅灰色 -->
+    <color name="gray">#b5b5b5</color>
+    <!-- 灰色 -->
+    <color name="buttongreen">#1e7de4</color>
+    <!-- 按钮文字浅蓝 -->
+    <color name="textblue">#165c92</color>
+    <color name="transparent">#9000</color>
+    <color name="common_bg">#E6E6E6</color>
+    <color name="alpha7balck">#b2000000</color>
+    <color name="red">#f00</color>
+    <color name="row_start_color">#CCFF99</color>
+    <color name="row_end_color">#CCFF99</color>
+    <color name="orderlist_group_tag">#555555</color>
+    <color name="graytext">#b0b0b0</color>
+    <color name="graytext2">#8f8f8f</color>
+    <!-- 页面背景 -->
+    <color name="buleword">#688fdf</color>
+    <!-- 页面背景 -->
+
+    <color name="recordtimeword">#63b7e7</color>
+    <color name="title_bule">#63b7e7</color>
+    <!-- 页面背景 -->
+    <!-- 日历 -->
+
+    <color name="calendar_background">#000000</color>
+    <color name="recordremind_background">#FFFFFF</color>
+    <color name="border_color">#FFFFFF</color>
+    <color name="weekname_color">#FFFFFF</color>
+    <color name="day_color">#FFFFFF</color>
+    <color name="text_day_color">#5f5f5f</color>
+    <color name="inner_grid_color">#FFFFFF</color>
+    <color name="prev_next_month_day_color">#999999</color>
+    <color name="text_color">#FFFF00</color>
+    <color name="recordremindtext_color">#000000</color>
+    <color name="current_day_color">#FF0000</color>
+    <color name="today_background_color">#FF0000</color>
+    <color name="today_color">#FFFFFF</color>
+    <color name="sunday_saturday_color">#FF0000</color>
+    <color name="sunday_saturday_prev_next_month_day_color">#990000</color>
+    <color name="bgcolor">#ffffff</color>
+    <color name="txtcolor">#000000</color>
+    <color name="Calendar_WeekBgColor">#EFE7DE</color>
+    <color name="Calendar_WeekFontColor">#8C8A8C</color>
+    <color name="Calendar_DayBgColor">#F7F7F7</color>
+    <color name="isHoliday_BgColor">#E0E0E0</color>
+    <color name="unPresentMonth_FontColor">#8C8A8C</color>
+    <color name="isPresentMonth_FontColor">#000000</color>
+    <color name="isToday_BgColor">#EBDCC1</color>
+    <color name="specialReminder">#FF0000</color>
+    <color name="commonReminder">#BDBAB5</color>
+    <color name="groupname">#688fdf</color>
+    <color name="ziti">#2e5892</color>
+    <color name="pressedziti">#FFFFFF</color>
+    <color name="pressemainboarditem">#fbfbfb</color>
+    <color name="unpressemainboarditem">#f0f0f0</color>
+    <color name="pressgreenbtn">#80b800</color>
+    <color name="unpressgreenbtn">#91cf00</color>
+
+
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <color name="order_control_bg">#f8f7f7</color>
+    <color name="order_control_divider1">#d8d8d8</color>
+    <color name="order_control_divider2">#aaaaaa</color>
+    <color name="order_detail_bg">#eeeeee</color>
+    <color name="order_detail_second_bg">#ffffff</color>
+
+    <color name="order_detail_divider1">#797979</color>
+    <color name="order_detail_second_title">#5f5d5d</color>
+
+    <color name="order_control_txt">#696969</color>
+    <color name="blue_bg">#2192e0</color>
+    <color name="color_news_pager_title_bg">#3e89ff</color> <!-- 蓝色背景 -->
+    <color name="color_news_pager_title_text">#00acee</color>
+    <color name="color_news_pager_defalut_title_text">#848282</color>
+
+    <color name="txt_blue">#FF007CB0</color>
+    <color name="txt_gray">#FF575756</color>
+    <color name="txt_orange">#FFEB6100</color>
+    <color name="bg_gray">#FFE3E3E7</color>
+    <color name="orange">#FFE84E0E</color>
+    <color name="bg">#FFF39200</color>
+
+    <color name="main_gray_bg">#f4f4f4</color>
+
+    <color name="lightorange">#FFACBA00</color>
+    <color name="transparentdarkgray">#CC292929</color>
+    <color name="transparentgray">#CC666666</color>
+    <color name="yellow">#ff9933</color>
+    <color name="light_blue">#5CACEE</color>
+    <color name="light_gray">#87CEEB</color>
+    <color name="orange_red">#613030</color>
+    <color name="whiteGray">#ffC9CACB</color>
+    <color name="text_gray">#959595</color>
+    <color name="text_hard_gray">#4f4f4f</color>
+    <color name="nomalGray">#838B83</color>
+    <color name="light_orange">#FFFCBA00</color>
+    <color name="coffee">#622f1b</color>
+    <color name="black2">#80000000</color>
+    <color name="click_color">#2b72d6</color>
+    <color name="radiobg_press">#43859d</color>
+    <color name="radiobg_normal">#FFFFFF</color>
+
+    <color name="buttom_top">#1e1e1e</color>
+    <color name="buttom_centre">#303030</color>
+    <color name="buttom_buttom">#000000</color>
+
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#ff333333</color>
+    <color name="line">#ffd3dde6</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="main_bg">#f0f0f0</color>
+    <color name="main_blue">#00acee</color>
+    <color name="main_blue_bg">#2192e0</color>
+    <color name="main_blue_unenable">#dddddd</color>
+    <color name="lv_bg">#f3f4f6</color>
+
+    <color name="bg_tColor">#666666</color>
+    <color name="bg_txtColor">#bfbfbf</color>
+    <color name="xiahuaxian">#e7e7e7</color>
+    <color name="common_top_bar_blue">#4ebcd3</color>
+    <color name="btn_login_normal">#00acff</color>
+    <color name="btn_login_pressed">#46678d</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+    <color name="btn_register_normal">#ffffff</color>
+    <color name="btn_register_pressed">#00acff</color>
+    <color name="common_bottom_bar_normal_bg">#2d2f31</color>
+    <color name="common_bottom_bar_selected_bg">#161718</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="divider_list">#d4d4d4</color>
+    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="bottom_bar_normal_bg">#2D2F31</color>
+    <color name="bottom_text_color_normal">#ffffff</color>
+    <color name="btn_white_normal">#f7f8f8</color>
+    <color name="btn_white_pressed">#b5b5b6</color>
+    <color name="btn_green_noraml">#68C270</color>
+    <color name="btn_green_pressed">#6FCD78</color>
+    <color name="btn_green_presseds">#39C881</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+    <color name="btn_gray_pressed_status">#b5b5b6</color>
+    <color name="btn_gray_pressed">#666667</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="btn_blue_pressed">#0066FF</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="gray_normal">#666667</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
+    <color name="voip_interface_text_color">#bababa</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="btn_answer_pressed">#4ebcd3</color>
+    <color name="btn_answer_normal">#2dafa3</color>
+
+
+    <color name="background">#FF000000</color>
+    <color name="pink_red">#F63E2A</color>
+    <color name="bulegray">#f0f0f0</color>
+    <color name="graylight">#cccccc</color>
+    <color name="orange_light">#fdaa0b</color>
+    <color name="gold">#ffd700</color>
+    <color name="semitransparent">#90000000</color>
+    <color name="nearly_hard">#97000000</color>
+    <color name="font_focus">#D7F679</color>
+    <color name="gold_player">#F7F466</color>
+    <color name="whitetran">#87FFFFFF</color>
+    <color name="divider_line">#FF575757</color>
+    <color name="listview_item_normal">#eef0ed</color>
+    <color name="listview_item_pressed">#d4d4d4</color>
+    <color name="message_checked">#90918f</color>
+    <color name="message_no_check">#323232</color>
+    <color name="stick_color_bg">#e2e2e2</color>
+
+    <!-- 上传图片添加的颜色 -->
+    <color name="none_color">#00000000</color>
+    <color name="none_colors">#39000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+
+
+    <color name="style_red">#ff4c41</color>
+    <color name="style_divider_color">#C9C7CD</color>
+
+    <color name="mediacontroller_bg_pressed">#ff53c1bd</color>
+    <color name="mediacontroller_bg">#99000000</color>
+
+    <color name="black_1">#0e0e15</color>
+
+
 </resources>
