@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person_information"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rc_plugins_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/title_layout" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_120PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:gravity="center_vertical"
+                    android:text="头像"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right">
+
+                    <com.example.jerry.testing.wedgit.CircleImageView
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/DIMEN_110PX"
+                        android:layout_height="@dimen/DIMEN_110PX"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/DIMEN_20PX"
+                        android:src="@mipmap/hugh" />
+
+                    <ImageView
+                        android:layout_width="@dimen/DIMEN_80PX"
+                        android:layout_height="@dimen/DIMEN_80PX"
+                        android:paddingLeft="@dimen/DIMEN_20PX"
+                        android:paddingRight="@dimen/DIMEN_35PX"
+                        android:src="@mipmap/caidan" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_86PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="邮箱"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8"
+                    android:gravity="right|center_vertical"
+                    android:text="未设置"
+                    android:textColor="@color/bg_tColor"
+                    android:textSize="@dimen/DIMEN_28PX"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/DIMEN_40PX"
+                    android:layout_weight="1"
+                    android:src="@mipmap/caidan" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_86PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="昵称"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8"
+                    android:gravity="right|center_vertical"
+                    android:text="请温柔的叫我程序猿"
+                    android:textColor="@color/bg_tColor"
+                    android:textSize="@dimen/DIMEN_28PX"
+
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/DIMEN_40PX"
+                    android:layout_weight="1"
+                    android:src="@mipmap/caidan" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_86PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="个人签名"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="7"
+                    android:gravity="right|center_vertical"
+                    android:text="热爱生活，享受生活"
+                    android:textColor="@color/bg_tColor"
+                    android:textSize="@dimen/DIMEN_28PX" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/DIMEN_40PX"
+                    android:layout_weight="1"
+                    android:src="@mipmap/caidan" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/tv_data"
+
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_86PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="其他登录方式"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="6"
+                    android:gravity="center_vertical|right"
+                    android:singleLine="true"
+                    android:textColor="@color/bg_tColor"
+                    android:textSize="@dimen/DIMEN_28PX" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_86PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:text="新浪微博"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="7"
+                    android:gravity="right|center_vertical"
+                    android:text="已启用"
+                    android:textColor="@color/bg_tColor"
+                    android:textSize="@dimen/DIMEN_28PX" />
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/DIMEN_40PX"
+                    android:layout_weight="1"
+                    android:src="@mipmap/caidan" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/DIMEN_86PX"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/DIMEN_30PX"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="微信"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_30PX" />
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="8"
+                    android:gravity="right|center_vertical"
+                    android:text="已启用"
+                    android:textColor="@color/bg_tColor"
+                    android:textSize="@dimen/DIMEN_28PX"
+                    android:id="@+id/textView5" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/DIMEN_40PX"
+                    android:layout_weight="1"
+                    android:src="@mipmap/caidan" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:background="@color/gray" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_88PX"
+                android:layout_margin="@dimen/DIMEN_150PX"
+                android:layout_marginBottom="@dimen/DIMEN_20PX"
+                android:background="@drawable/bg_btn_login"
+                android:text="确定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

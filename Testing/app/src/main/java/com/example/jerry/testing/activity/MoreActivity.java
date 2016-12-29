@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jerry.testing.R;
+import com.example.jerry.testing.ptr.PullToRefreshLayout;
+import com.example.jerry.testing.ptr.RefreshLinstener;
+import com.example.jerry.testing.wedgit.BilibiliHeader;
 import com.jaeger.library.StatusBarUtil;
 
 public class MoreActivity extends BaseActivity implements View.OnClickListener{
@@ -29,6 +32,22 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener{
         Iv_add=(ImageView)findViewById(R.id.Iv_add);
         Iv_add.setOnClickListener(this);
         Iv_info.setOnClickListener(this);
+        final PullToRefreshLayout ptr = (PullToRefreshLayout) findViewById(R.id.ptrlayout);
+        BilibiliHeader header = new BilibiliHeader(this);
+        ptr.setHeader(header);
+
+        ptr.setRefreshLinstener(new RefreshLinstener() {
+            @Override
+            public void onRefreshStart() {
+                ptr.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ptr.succeedRefresh();
+                    }
+                },2000);
+            }
+        });
+
     }
     private void initHead() {
         ImageView image_back = (ImageView) findViewById(R.id.image_back);
@@ -36,6 +55,7 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener{
         Iv_collection.setVisibility(View.GONE);
         image_back .setVisibility(View.GONE);
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

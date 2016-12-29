@@ -2,11 +2,125 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_add_habit"
     android:layout_width="match_parent"
-    android:background="@color/btn_answer_pressed"
+    android:background="@color/rc_plugins_bg"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
     <include
         android:id="@+id/include"
         layout="@layout/title_layout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="@dimen/DIMEN_150PX">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/DIMEN_20PX"
+        android:textColor="@color/black"
+        android:textSize="@dimen/DIMEN_28PX"
+        android:text="习惯"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/DIMEN_30PX"
+            android:hint="取个名字吧~"
+            android:background="@null"
+            android:textColorHint="@color/gray"
+            android:textSize="@dimen/DIMEN_24PX"
+            android:id="@+id/editText" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_3PX"
+        android:background="@color/line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="@dimen/DIMEN_200PX">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/DIMEN_30PX"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/DIMEN_20PX"
+        android:textColor="@color/black"
+        android:textSize="@dimen/DIMEN_28PX"
+        android:text="描述"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/DIMEN_30PX"
+        android:hint="不给习惯来点描述吗？"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:textColor="@color/background"
+        android:textColorHint="@color/gray"
+        android:textSize="@dimen/DIMEN_24PX" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/DIMEN_3PX"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/DIMEN_20PX"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_height="@dimen/DIMEN_100PX">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/DIMEN_20PX"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/DIMEN_28PX"
+        android:text="生活"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="@dimen/DIMEN_20PX"
+            android:gravity="right"
+            android:src="@mipmap/moretag"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/DIMEN_100PX"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/DIMEN_20PX"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/DIMEN_60PX"
+            android:layout_height="@dimen/DIMEN_60PX"
+            android:src="@mipmap/calendar"
+            />
+
+
+        <ImageView
+            android:layout_width="@dimen/DIMEN_100PX"
+            android:layout_height="@dimen/DIMEN_60PX"
+            android:paddingLeft="@dimen/DIMEN_30PX"
+            android:src="@mipmap/colok"
+            />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center"
+            android:layout_marginRight="@dimen/DIMEN_20PX"
+            android:textSize="@dimen/DIMEN_24PX"
+            android:text="添加"/>
+
+    </LinearLayout>
 </LinearLayout>

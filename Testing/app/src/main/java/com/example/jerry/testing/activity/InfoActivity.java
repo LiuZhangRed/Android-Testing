@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.jerry.testing.R;
+import com.example.jerry.testing.ptr.PullToRefreshLayout;
+import com.example.jerry.testing.ptr.RefreshLinstener;
+import com.example.jerry.testing.wedgit.BilibiliHeader;
 import com.example.jerry.testing.wedgit.CircleImageView;
 import com.jaeger.library.StatusBarUtil;
 
@@ -22,8 +25,25 @@ public class InfoActivity extends BaseActivity {
         mContext = this;
 
         initView();
+        final PullToRefreshLayout ptr = (PullToRefreshLayout) findViewById(R.id.ptrlayout);
+        BilibiliHeader header = new BilibiliHeader(this);
+        ptr.setHeader(header);
+
+        ptr.setRefreshLinstener(new RefreshLinstener() {
+            @Override
+            public void onRefreshStart() {
+                ptr.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ptr.succeedRefresh();
+                    }
+                },2000);
+            }
+        });
+
 
     }
+
     private void initView() {
         image = (CircleImageView) findViewById(R.id.image);
         image_back=(ImageView)findViewById(R.id.image_back);
@@ -32,6 +52,13 @@ public class InfoActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(InfoActivity.this,MoreActivity.class);
+                startActivity(intent);
+            }
+        });
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(InfoActivity.this,PersonInformationActivity.class);
                 startActivity(intent);
             }
         });

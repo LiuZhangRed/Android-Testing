@@ -2,22 +2,24 @@ package com.example.jerry.testing.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.example.jerry.testing.R;
+import com.example.jerry.testing.wedgit.WaveAnimationView;
 import com.jaeger.library.StatusBarUtil;
+
 
 public class MainActivity extends BaseActivity {
     private long clickTime = 0; //记录第一次点击的时间
     private ImageView Iv_more;
     private Context mContext;
     private ImageView image_back,Iv_collection;
+
+    private WaveAnimationView waveAnimationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class MainActivity extends BaseActivity {
         initHead();
         StatusBarUtil.setTransparent(this);
         Iv_more=(ImageView)findViewById(R.id.Iv_more);
+        waveAnimationView = (WaveAnimationView)findViewById(R.id.pull_to_refresh_wave);
         Iv_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,6 +36,9 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
+        waveAnimationView.startAnimation();
     }
 
     private void initHead() {
@@ -58,5 +64,15 @@ public class MainActivity extends BaseActivity {
             this.finish();
         }
     }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        waveAnimationView.stopAnimation();
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        waveAnimationView.startAnimation();
+    }
 }

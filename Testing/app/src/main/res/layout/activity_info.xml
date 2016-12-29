@@ -5,11 +5,16 @@
     android:layout_height="match_parent"
     android:background="@color/rc_plugins_bg"
     android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/DIMEN_86PX">
 
-    </RelativeLayout>
+    <com.example.jerry.testing.ptr.PullToRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ptrlayout"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
 
     <ImageView
         android:id="@+id/background_img"
@@ -322,4 +327,8 @@
          />
 
     </LinearLayout>
+
+        </RelativeLayout>
+    </com.example.jerry.testing.ptr.PullToRefreshLayout>
+
 </RelativeLayout>

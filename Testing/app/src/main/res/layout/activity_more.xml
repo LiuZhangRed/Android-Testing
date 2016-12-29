@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/btn_answer_pressed"
     android:layout_width="match_parent"
@@ -9,13 +10,31 @@
     <include
         android:id="@+id/include"
         layout="@layout/title_layout" />
-    <TextView
+
+    <com.example.jerry.testing.ptr.PullToRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="少成若天性，习惯成自然 --- 孔子"
-        android:textColor="@color/white" />
-    <LinearLayout
+        android:id="@+id/ptrlayout"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/DIMEN_20PX"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="少成若天性，习惯成自然 --- 孔子"
+                android:textColor="@color/white" />
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/DIMEN_30PX"
@@ -561,5 +580,8 @@
 
         </LinearLayout>
 
+        </LinearLayout>
 
+    </ScrollView>
+    </com.example.jerry.testing.ptr.PullToRefreshLayout>
 </LinearLayout>
