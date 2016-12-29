@@ -161,6 +161,7 @@
     <color name="viewfinder_mask">#60000000</color>
     <color name="header">#58567D</color>
     <color name="grgray">#686868</color>
+    <color name="rc_plugins_bg">#E0E7EB</color>
     <color name="order_control_bg">#f8f7f7</color>
     <color name="order_control_divider1">#d8d8d8</color>
     <color name="order_control_divider2">#aaaaaa</color>
@@ -278,7 +279,7 @@
     <color name="none_color">#00000000</color>
     <color name="none_colors">#39000000</color>
     <color name="plugin_camera_black">#000000</color>
-    <color name="albumback">#E1E0DE</color>
+    <color name="albumback">#a1a1a1</color>
 
 
     <color name="style_red">#ff4c41</color>

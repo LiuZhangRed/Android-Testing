@@ -8,30 +8,33 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.jerry.testing.R;
+import com.jaeger.library.StatusBarUtil;
 
 public class MoreActivity extends BaseActivity implements View.OnClickListener{
     private ImageView Iv_add;
-    private ImageView Iv_info;
+    private ImageView Iv_info,image_back,Iv_collection;
     private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            //透明状态栏
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            View view_title = (View) findViewById(R.id.view_title);
-            view_title.setVisibility(View.VISIBLE);
-            //  getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); （导航栏）
-        }
+        StatusBarUtil.setTransparent(this);
         mContext = this;
+        initHead();
         Iv_info=(ImageView)findViewById(R.id.Iv_info);
         Iv_add=(ImageView)findViewById(R.id.Iv_add);
         Iv_add.setOnClickListener(this);
         Iv_info.setOnClickListener(this);
+    }
+    private void initHead() {
+        ImageView image_back = (ImageView) findViewById(R.id.image_back);
+        ImageView Iv_collection= (ImageView) findViewById(R.id.collection);
+        Iv_collection.setVisibility(View.GONE);
+        image_back .setVisibility(View.GONE);
     }
     @Override
     public void onClick(View v) {
@@ -39,6 +42,10 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener{
             case R.id.Iv_info:
                 Intent in = new Intent(MoreActivity.this, InfoActivity.class);
                 startActivity(in);
+                break;
+            case R.id.Iv_add:
+                Intent inS= new Intent(MoreActivity.this, AddHabitActivity.class);
+                startActivity(inS);
                 break;
         }
     }

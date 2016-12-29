@@ -31,7 +31,7 @@ public class WelComeActivity extends BaseActivity {
                       finish();
                       }
                };
-            timer.schedule(task,3000);
+            timer.schedule(task,5000);
 
          }
 

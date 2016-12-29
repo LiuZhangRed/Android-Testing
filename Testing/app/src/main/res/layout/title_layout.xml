@@ -19,7 +19,14 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="@dimen/DIMEN_86PX">
-
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/DIMEN_20PX"
+            android:paddingLeft="@dimen/DIMEN_20PX"
+            android:layout_marginTop="@dimen/DIMEN_20PX"
+            android:src="@mipmap/push_back"/>
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="fill_parent"
@@ -29,7 +36,17 @@
             android:textColor="@color/white"
             android:textSize="@dimen/DIMEN_36PX"
             />
-
-
+        <ImageView
+            android:id="@+id/collection"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/DIMEN_66PX"
+            android:src="@mipmap/collection"
+            android:layout_marginRight="@dimen/DIMEN_20PX"
+          android:layout_marginTop="@dimen/DIMEN_5PX"
+            android:textColor="@color/white"
+            android:textSize="@dimen/DIMEN_70PX"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
 </LinearLayout>

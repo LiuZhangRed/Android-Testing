@@ -1,5 +1,6 @@
 package com.example.jerry.testing.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -7,23 +8,23 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.example.jerry.testing.R;
+import com.jaeger.library.StatusBarUtil;
 
 public class MainActivity extends BaseActivity {
     private long clickTime = 0; //记录第一次点击的时间
     private ImageView Iv_more;
+    private Context mContext;
+    private ImageView image_back,Iv_collection;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            //透明状态栏
-            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            View view_title = (View) findViewById(R.id.view_title);
-            view_title.setVisibility(View.VISIBLE);
-            //  getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION); （导航栏）
-        }
+        mContext = this;
+        initHead();
+        StatusBarUtil.setTransparent(this);
         Iv_more=(ImageView)findViewById(R.id.Iv_more);
         Iv_more.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +35,12 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-
+    private void initHead() {
+        ImageView image_back = (ImageView) findViewById(R.id.image_back);
+        ImageView Iv_collection= (ImageView) findViewById(R.id.collection);
+        Iv_collection.setVisibility(View.GONE);
+        image_back .setVisibility(View.GONE);
+    }
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             exit();

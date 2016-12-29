@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import com.example.jerry.testing.R;
+import com.jaeger.library.StatusBarUtil;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private ImageView weibo;
@@ -16,6 +17,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        StatusBarUtil.setTransparent(this);
         mContext = this;
         weibo = (ImageView ) findViewById(R.id.weibo);
         qq = (ImageView ) findViewById(R.id.qq);
