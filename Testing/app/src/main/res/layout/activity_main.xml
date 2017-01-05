@@ -159,7 +159,7 @@
                             android:layout_width="20dp"
                             android:layout_marginLeft="@dimen/DIMEN_30PX"
                             android:layout_height="20dp"
-                            app:color_checked="@color/colorAccent"/>
+                            />
 
 
                         <TextView
@@ -221,8 +221,7 @@
                         <com.example.jerry.testing.checkbox.SmoothCheckBox
                             android:layout_width="20dp"
                             android:layout_marginLeft="@dimen/DIMEN_30PX"
-                            android:layout_height="20dp"
-                            app:color_checked="@color/colorAccent"/>
+                            android:layout_height="20dp" />
 
 
                         <TextView
@@ -286,7 +285,7 @@
                             android:layout_width="20dp"
                             android:layout_marginLeft="@dimen/DIMEN_30PX"
                             android:layout_height="20dp"
-                            app:color_checked="@color/colorAccent"/>
+                        />
 
                         <TextView
 
@@ -348,7 +347,7 @@
                             android:layout_width="20dp"
                             android:layout_marginLeft="@dimen/DIMEN_30PX"
                             android:layout_height="20dp"
-                            app:color_checked="@color/colorAccent"/>
+                     />
 
                         <TextView
 
