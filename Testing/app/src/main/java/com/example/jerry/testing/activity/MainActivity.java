@@ -3,11 +3,16 @@ package com.example.jerry.testing.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.jerry.testing.R;
+import com.example.jerry.testing.checkbox.SmoothCheckBox;
+import com.example.jerry.testing.ptr.PullToRefreshLayout;
+import com.example.jerry.testing.ptr.RefreshLinstener;
+import com.example.jerry.testing.wedgit.BilibiliHeader;
 import com.example.jerry.testing.wedgit.WaveAnimationView;
 import com.jaeger.library.StatusBarUtil;
 
@@ -27,8 +32,15 @@ public class MainActivity extends BaseActivity {
         mContext = this;
         initHead();
         StatusBarUtil.setTransparent(this);
+        final SmoothCheckBox scb = (SmoothCheckBox) findViewById(R.id.scb);
+        scb.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
+                Log.d("SmoothCheckBox", String.valueOf(isChecked));
+            }
+        });
+
         Iv_more=(ImageView)findViewById(R.id.Iv_more);
-        waveAnimationView = (WaveAnimationView)findViewById(R.id.pull_to_refresh_wave);
         Iv_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,9 +48,22 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+        final PullToRefreshLayout ptr = (PullToRefreshLayout) findViewById(R.id.ptrlayout);
+        BilibiliHeader header = new BilibiliHeader(this);
+        ptr.setHeader(header);
 
+        ptr.setRefreshLinstener(new RefreshLinstener() {
+            @Override
+            public void onRefreshStart() {
+                ptr.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ptr.succeedRefresh();
+                    }
+                },2000);
+            }
+        });
 
-        waveAnimationView.startAnimation();
     }
 
     private void initHead() {
@@ -67,12 +92,10 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        waveAnimationView.stopAnimation();
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        waveAnimationView.startAnimation();
     }
 }

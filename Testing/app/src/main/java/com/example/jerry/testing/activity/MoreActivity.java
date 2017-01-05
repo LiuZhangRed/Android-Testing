@@ -2,15 +2,12 @@ package com.example.jerry.testing.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import com.example.jerry.testing.R;
+import com.example.jerry.testing.checkbox.SmoothCheckBox;
 import com.example.jerry.testing.ptr.PullToRefreshLayout;
 import com.example.jerry.testing.ptr.RefreshLinstener;
 import com.example.jerry.testing.wedgit.BilibiliHeader;
@@ -32,7 +29,7 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener{
         Iv_add=(ImageView)findViewById(R.id.Iv_add);
         Iv_add.setOnClickListener(this);
         Iv_info.setOnClickListener(this);
-        final PullToRefreshLayout ptr = (PullToRefreshLayout) findViewById(R.id.ptrlayout);
+              final PullToRefreshLayout ptr = (PullToRefreshLayout) findViewById(R.id.ptrlayout);
         BilibiliHeader header = new BilibiliHeader(this);
         ptr.setHeader(header);
 
@@ -47,7 +44,13 @@ public class MoreActivity extends BaseActivity implements View.OnClickListener{
                 },2000);
             }
         });
-
+        final SmoothCheckBox scb = (SmoothCheckBox) findViewById(R.id.scb);
+        scb.setOnCheckedChangeListener(new SmoothCheckBox.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
+                Log.d("SmoothCheckBox", String.valueOf(isChecked));
+            }
+        });
     }
     private void initHead() {
         ImageView image_back = (ImageView) findViewById(R.id.image_back);

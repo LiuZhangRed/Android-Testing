@@ -27,6 +27,8 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/DIMEN_30PX"
             android:hint="取个名字吧~"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:background="@null"
             android:textColorHint="@color/gray"
             android:textSize="@dimen/DIMEN_24PX"

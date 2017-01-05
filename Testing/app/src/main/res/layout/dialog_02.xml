@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/DIMEN_260PX"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/DIMEN_10PX"
+        android:background="@mipmap/bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/phone_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/DIMEN_80PX"
+                    android:gravity="center"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="照片选择"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/DIMEN_32PX"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/camera"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_60PX">
+
+                <TextView
+                    android:id="@+id/tv_paizhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="拍照"
+                    android:textSize="@dimen/DIMEN_28PX" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_60PX">
+
+                <TextView
+                    android:id="@+id/tv_xiangce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="从相册中选择"
+                    android:textSize="@dimen/DIMEN_28PX" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/DIMEN_60PX">
+
+                <TextView
+                    android:id="@+id/tv_quxiao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/DIMEN_10PX"
+                    android:text="取消"
+                    android:textSize="@dimen/DIMEN_28PX" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="stranslucent_background">#80000000</color>
+    <color name="colorAccent">#FF4081</color>
     <!-- 头部颜色 -->
     <color name="title_clor">#46466d</color>
     <!-- 按钮颜色 -->

@@ -23,7 +23,9 @@
         <activity android:name=".activity.MoreActivity" />
         <activity android:name=".activity.InfoActivity" />
         <activity android:name=".activity.AddHabitActivity" />
-        <activity android:name=".activity.PersonInformationActivity"></activity>
+        <activity android:name=".activity.PersonInformationActivity" />
+        <activity android:name=".activity.UpdataNicknameActivity" />
+        <activity android:name=".activity.UpdataEmailActivity"></activity>
     </application>
 
 </manifest>
